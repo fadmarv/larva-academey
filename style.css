@@ -1,17 +1,20 @@
 body,* {
-    margin: 0;
     padding: 0;
-    /* background: linear-gradient(to right, #FFFFFF, #ECE9E6); */
+    margin: 0;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
+
 nav img{
     width: 28%;
-    height: 25vh;
 }
-
-nav{
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+/* nav{
     border: 1px solid black;
     width: 100%;
     height: 8vh;
@@ -22,27 +25,27 @@ nav{
     top: 0;
     position: sticky;
    
-}
-nav ul{
+} */
+/* nav ul{
     margin: 10px 0px;
-}
-nav ul li{
+} */
+/* nav ul li{
     display: inline;
     list-style: none;
     
-}
-nav li{
+} */
+/* nav li{
     list-style: none; 
-}
-nav li a{
+} */
+nav li .an{
     text-decoration: none;
     color: white;
-    font-size: 1.3rem;
-    transition: all .2s ease;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
 }
-nav ul li a:hover{
+nav ul li .an:hover{
     color: dodgerblue;
-    background-color: black;
+    background-color: orangered;
     border-radius: 10px;
     padding: 3px;
 }
@@ -51,66 +54,85 @@ nav ul li a:hover{
     height: 10vh;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* }
-.fa-solid .fa-bars{
-    font-size: 5rem;
+.vna {
+    margin: auto;
 }
-.redd{
-    width: 15%;
-    
-    height: 10vh;
+
+section {
+    /* border: 1px solid black; */
+    width: 100vw;
+    height: 70vh;
+    margin-top: 100px;
 }
-nav{
-    border: 1px solid black;
+section .banner {
+    background: url(images/herosectionimg.jpg);
+    background-size: cover;
+}
+.small img {
+    height: 50vh;
     width: 100%;
-    height: 8vh;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    background-color: burlywood;
-    border: none;
-    top: 0;
-    position: sticky;
-    
 }
-ul li{
-    list-style: none;
-    display: inline;
-    
+.txtIndiv {
+    position: absolute;
+    top: 20vh;
+    color: orange;
+    width: 250px;
 }
-ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: sans-serif;
-    font-size: 1.2em;
 
+
+main {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
-ul li a:hover{
-    color: dodgerblue;
-    background-color: black;
-    border-radius: 10px;
-    padding: 5px;
-
-} */
-
+@media (min-width:768px) {
+    .txtIndiv h1 {
+        font-size: 50px;
+        color: gold;
+        width: 450px;
+    }
+    .txtIndiv {
+        margin-left: 150px;
+        margin-top: 50px;
+        animation: 1.5s pulse ease-in-out infinite;
+    }
+    @keyframes pulse {
+        0% {
+            opacity: 1;
+            transform: translateY(20px);
+        }
+        25% {
+            transform: translateY(0);
+            transform: translateX(5px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        75% {
+            transform: translateY(0px);
+            transform: translateX(-5px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+    .banner {
+        /* border: 1px solid black; */
+        width: 100vw;
+        height: 85vh;
+        margin-left: 600px;
+        border-radius: 100px;
+        margin-top: 50px;
+        animation: 0.5s bounce ease-in-out;
+    }
+    @keyframes bounce {
+        0% {
+            opacity: 0;
+            transform: translateX(-1000px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
