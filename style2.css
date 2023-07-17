@@ -1,0 +1,45 @@
+.form {
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 82vh;
+    background-color: gold;
+    opacity: 0.9;
+    /* display: none; */
+    border-radius: 20px;
+}
+.form h1{
+    text-align: center;
+    margin-top: 20px;
+    color: orangered;
+    font-family: 'Just Another Hand', cursive;
+}
+.form textarea {
+    margin-top: 30px;
+    margin-left: 3px;
+    padding-left: 20px;
+    padding-top: 10px;
+    color: orangered;
+    background: white;
+}
+.form .submit {
+    margin-left: 140px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.submit:hover {
+    color: green;
+}
+.cancel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    cursor: pointer;
+}
